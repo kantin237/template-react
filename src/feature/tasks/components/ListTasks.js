@@ -3,37 +3,36 @@ import Task from './Task'
 import tasksEndPoint from '../../../tasksEndPoint.json';
 
 import {getTasks }from '../../../state-manager/actions/taskAction'
-import {GET_ALL_TASKS} from '../../../state-manager/actions/taskTypes'
+import {GET_ALL_TASKS, LOAD} from '../../../state-manager/actions/taskTypes'
 import {useDispatch,useSelector} from 'react-redux'
 
 export default function ListTasks() {
 
     const dispatch = useDispatch();
-    let stateTask = useSelector(state => { return state.taskReducer.tasks});
+    let stateTask = useSelector(state => { return state.tasks});
+    console.log(stateTask)
     const loadTasks = () => {
-
-        getTasks()
-        .data
-        .map(value => dispatch({
-            type: GET_ALL_TASKS,
-            data: value
-        }));
+        dispatch(getTasks());
     }
+
     useEffect(() => {
         loadTasks();
     }, []);
+    
     return (
         <div className="tasks-container ">
-            {stateTask.map(task => (
+            {stateTask.tasks.map(task => (
                 <div>
-                    <Task
-                    key = {task.id}
-                    id = {task.id}
-                    hour = {task.heure}
-                    minutes = {task.min}
-                    name = {task.nom}
-                    location = {task.lieu}
-                    />
+                    {task.data.map(x => 
+                        <Task
+                        key = {x.id}
+                        id = {x.id}
+                        hour = {x.heure}
+                        minutes = {x.min}
+                        name = {x.nom}
+                        location = {x.lieu}
+                        />
+                    )}
                 </div>
             ))}
         </div>

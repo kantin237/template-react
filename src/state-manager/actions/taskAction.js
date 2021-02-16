@@ -1,14 +1,10 @@
 import axios from 'axios'
-import { GET_ALL_TASKS, ADD_TASK, DELETE_TASK } from './taskTypes'
+import { GET_ALL_TASKS, ADD_TASK, DELETE_TASK,LOAD,LOAD_SUCCESS,LOAD_FAILED  } from './taskTypes'
 import tasksEndPoint from '../../tasksEndPoint.json';
 
 export function getTasks(){
-    // const tasks = axios.get('https...')
-    // .then(response => response.data)
-    const tasks = tasksEndPoint;
     return{
-        type: GET_ALL_TASKS,
-        data: tasks
+        type: LOAD
     }
 }
 
@@ -17,9 +13,10 @@ export function addTask(){
 }
 
 export function deleteTask(id){
+    debugger
     // const tasks = axios.delete('https.../id')
     return{
         type: DELETE_TASK,
-        data: id
+        id
     }
 }

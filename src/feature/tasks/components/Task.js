@@ -8,16 +8,7 @@ import {useDispatch,useSelector} from 'react-redux'
 export default function Task(props) {
 
 	const dispatch = useDispatch();
-
-
-	const deleteT = (id) => {
-		deleteTask(
-			dispatch({
-				type: DELETE_TASK,
-				data: id 
-			})
-		);
-	}
+	
     return (
         <div className="task border-bottom" id={props.id}>
 				<span className="taskDetails" onClick={() => console.log('clic')}>
@@ -28,7 +19,7 @@ export default function Task(props) {
 					</div>
 				</span>
 				
-				<span className="taskOpen"><i className="fas fa-trash fa-1x" onClick={() => deleteT(props.id)}></i></span>
+				<span className="taskOpen"><i className="fas fa-trash fa-1x" onClick={() => dispatch(deleteTask(props.id),console.log(props.id))}></i></span>
 
 			</div>
     )

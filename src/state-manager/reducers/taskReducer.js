@@ -1,12 +1,12 @@
 import React from 'react'
-import { GET_ALL_TASKS, ADD_TASK, DELETE_TASK } from '../actions/taskTypes'
+import { DELETE, GET_ALL_TASKS, ADD_TASK, DELETE_TASK,LOAD,LOAD_SUCCESS,LOAD_FAILED } from '../actions/taskTypes'
 
 const INITIAL_STATE = {
     tasks: []
 }
 export default function taskReducer(state = INITIAL_STATE, action){
     switch(action.type){
-        case GET_ALL_TASKS:
+        case LOAD_SUCCESS:
             return {
                 ...state,
                 tasks: state.tasks.concat(action.data)
@@ -18,7 +18,8 @@ export default function taskReducer(state = INITIAL_STATE, action){
             tasks: action.data
         }
 
-        case DELETE_TASK:
+        case DELETE:
+            debugger
             return {
                 ...state,
                 tasks: state.tasks.filter( x => action.data !== x.id)

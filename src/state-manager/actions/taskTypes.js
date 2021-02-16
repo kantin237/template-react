@@ -1,3 +1,7 @@
 export const GET_ALL_TASKS = 'GET_ALL_TASKS'
 export const ADD_TASK = 'ADD_TASK'
 export const DELETE_TASK = 'DELETE_TASK'
+export const LOAD = 'LOAD'
+export const LOAD_SUCCESS = 'LOAD_SUCCESS'
+export const LOAD_FAILED = 'LOAD_FAILED'
+export const DELETE = 'DELETE'
