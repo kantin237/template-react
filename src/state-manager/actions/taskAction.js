@@ -4,7 +4,7 @@ import tasksEndPoint from '../../tasksEndPoint.json';
 
 export function getTasks(){
     return{
-        type: LOAD
+        type: GET_ALL_TASKS
     }
 }
 
@@ -13,8 +13,7 @@ export function addTask(){
 }
 
 export function deleteTask(id){
-    debugger
-    // const tasks = axios.delete('https.../id')
+
     return{
         type: DELETE_TASK,
         id

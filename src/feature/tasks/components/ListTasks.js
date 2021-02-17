@@ -23,16 +23,14 @@ export default function ListTasks() {
         <div className="tasks-container ">
             {stateTask.tasks.map(task => (
                 <div>
-                    {task.data.map(x => 
-                        <Task
-                        key = {x.id}
-                        id = {x.id}
-                        hour = {x.heure}
-                        minutes = {x.min}
-                        name = {x.nom}
-                        location = {x.lieu}
+                    <Task
+                        key = {task.id}
+                        id = {task.id}
+                        hour = {task.heure}
+                        minutes = {task.min}
+                        name = {task.nom}
+                        location = {task.lieu}
                         />
-                    )}
                 </div>
             ))}
         </div>

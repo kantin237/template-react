@@ -6,10 +6,10 @@ const INITIAL_STATE = {
 }
 export default function taskReducer(state = INITIAL_STATE, action){
     switch(action.type){
-        case LOAD_SUCCESS:
+        case GET_ALL_TASKS:
+            debugger
             return {
-                ...state,
-                tasks: state.tasks.concat(action.data)
+                tasks: action.data
             }
         
         case ADD_TASK:
@@ -21,8 +21,7 @@ export default function taskReducer(state = INITIAL_STATE, action){
         case DELETE:
             debugger
             return {
-                ...state,
-                tasks: state.tasks.filter( x => action.data !== x.id)
+                tasks: action.data
             }
 
         default:
