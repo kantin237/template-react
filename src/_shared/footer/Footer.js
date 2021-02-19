@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div>
             <div className="jumbotron text-center mb-0">
-                <p>Footer</p>
+                <h2>Footer</h2>
             </div>
         </div>
     )
