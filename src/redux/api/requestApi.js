@@ -1,5 +1,5 @@
 import axios from "axios";
-import tasksEndPoint from '../tasksEndPoint.json';
+import tasksEndPoint from '../../tasksEndPoint.json';
 
 export function apiGetCall(url, headers){
     return axios.get(url)

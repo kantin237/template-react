@@ -1,4 +1,4 @@
-import {apiGetCall} from '../../api/requestApi'
+import {apiGetCall} from './api/requestApi'
 
 const  loadtasks = () => {
     debugger

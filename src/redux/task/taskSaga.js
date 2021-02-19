@@ -1,6 +1,6 @@
 import { call, put } from 'redux-saga/effects';
-import loadTasks from './apiCalls';
-import {GET_ALL_TASKS} from '../actions/taskTypes'
+import loadTasks from '../apiCalls';
+import {GET_ALL_TASKS} from './taskType'
 
 export default function* loadTask(){
     debugger

@@ -1,5 +1,5 @@
 import React from 'react'
-import { DELETE, GET_ALL_TASKS, ADD_TASK, DELETE_TASK,LOAD,LOAD_SUCCESS,LOAD_FAILED } from '../actions/taskTypes'
+import { DELETE, GET_ALL_TASKS, ADD_TASK, DELETE_TASK,LOAD,LOAD_SUCCESS,LOAD_FAILED } from './taskType'
 
 const INITIAL_STATE = {
     tasks: []
@@ -14,7 +14,6 @@ export default function taskReducer(state = INITIAL_STATE, action){
         
         case ADD_TASK:
         return {
-            ...state,
             tasks: action.data
         }
 

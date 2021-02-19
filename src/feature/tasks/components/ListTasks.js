@@ -1,9 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import Task from './Task'
-import tasksEndPoint from '../../../tasksEndPoint.json';
 
-import {getTasks }from '../../../state-manager/actions/taskAction'
-import {GET_ALL_TASKS, LOAD} from '../../../state-manager/actions/taskTypes'
+import {getTasks }from '../../../redux/task/taskAction'
 import {useDispatch,useSelector} from 'react-redux'
 
 export default function ListTasks() {

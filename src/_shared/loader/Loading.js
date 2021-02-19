@@ -1,5 +1,5 @@
 import './loading.css'
-import load from '../../../assets/chasing-arrows.gif'
+import load from '../../assets/chasing-arrows.gif'
 
 
 export default function Loading() {

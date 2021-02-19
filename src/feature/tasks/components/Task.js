@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
-import point from '../../../assets/suspensepoint.svg'
 
-import {deleteTask }from '../../../state-manager/actions/taskAction'
-import {DELETE_TASK} from '../../../state-manager/actions/taskTypes'
+import {deleteTask }from '../../../redux/task/taskAction'
 import {useDispatch,useSelector} from 'react-redux'
 
 export default function Task(props) {
@@ -11,7 +9,7 @@ export default function Task(props) {
 	
     return (
         <div className="task border-bottom" id={props.id}>
-				<span className="taskDetails" onClick={() => console.log('clic')}>
+				<span className="taskDetails" onClick={() => console.log('detail Task')}>
 					<span className="taskDate">{props.hour}:{props.minutes}</span>
 					<div>
 						<span className="taskText">{props.name}</span>

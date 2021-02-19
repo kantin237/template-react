@@ -1,6 +1,5 @@
 import axios from 'axios'
-import { GET_ALL_TASKS, ADD_TASK, DELETE_TASK,LOAD,LOAD_SUCCESS,LOAD_FAILED  } from './taskTypes'
-import tasksEndPoint from '../../tasksEndPoint.json';
+import { GET_ALL_TASKS, ADD_TASK, DELETE_TASK,LOAD,LOAD_SUCCESS,LOAD_FAILED  } from './taskType'
 
 export function getTasks(){
     return{
