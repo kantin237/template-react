@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../_shared/footer/Footer'
+import Footer from '../components/footers/Footer'
 
 export default function FooterLayout() {
     return (

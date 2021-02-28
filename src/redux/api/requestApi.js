@@ -1,14 +1,12 @@
 import axios from "axios";
-import tasksEndPoint from '../../tasksEndPoint.json';
 
-export function apiGetCall(url, headers){
+export function apiGetCall(url){
     return axios.get(url)
         .then(response => {
             console.log(response.data);
-            console.log(tasksEndPoint);
-            return tasksEndPoint ;
+            return response.data ;
         })
-        .catch(error => console.log(error));
+        .catch(error => console.log('error'));
 
 }
 

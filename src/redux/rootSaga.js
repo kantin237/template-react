@@ -1,16 +1,12 @@
 import { takeEvery, call, put, fork, takeLatest } from 'redux-saga/effects';
 import {LOAD,GET_ALL_TASKS,LOAD_SUCCESS,LOAD_FAILED,DELETE_TASK,DELETE} from './task/taskType'
+import {LOAD_BOOK} from './book/bookType'
 import loadTask from './task/taskSaga'
+import loadBook from './book/bookSaga'
 
 
 function* rootSaga() {
-    debugger
-    yield [
-        fork(loadTask),
-        takeLatest(GET_ALL_TASKS, loadTask)
-    ]
-    
-
+    yield takeLatest(LOAD_BOOK, loadBook);
 }
 
 
